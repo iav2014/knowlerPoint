@@ -32,6 +32,9 @@ Requirements
 opencv4nodejs
 (see: https://www.npmjs.com/package/opencv4nodejs)
 
+tested with node v 11.1.0,
+and MAC osx mojave 10.14.4 and powerpoint 2016
+
 MacOS / OSX
 cmake brew install cmake
 

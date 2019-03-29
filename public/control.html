@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+				integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>KnowlerPoint gesture control</title>
+	<!-- Custom CSS -->
+	<style>
+		h1 {
+			color: green;
+			text-align: center;
+		}
+
+		div.one {
+			margin-top: 40px;
+			text-align: center;
+		}
+
+		button {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>KnowlerPoint</h1>
+
+	<!-- Bootstrap Button Classes -->
+	<div class="one">
+		<button type="button" class="btn btn-open  btn-primary" id="open">Open</button>
+		<button type="button" class="btn btn-start btn-primary" id="start">Start</button>
+		<button type="button" class="btn btn-start btn-primary" id="stop">Stop</button>
+		<button type="button" class="btn btn-close btn-primary" id="close">Close</button>
+
+		<button type="button" class="btn btn-next btn-primary" id="next">Next</button>
+		<button type="button" class="btn btn-prev btn-primary" id="prev">Prev</button>
+
+		<button type="button" class="btn btn-info btn-primary" id="info">Info</button>
+		<button type="button" class="btn btn-stat btn-primary" id="stat">Stat</button>
+
+		<button type="button" class="btn btn-pause btn-primary" id="pause">Pause</button>
+		<button type="button" class="btn btn-resume btn-primary" id="resume">Resume</button>
+		<button type="button" class="btn btn-first btn-primary" id="first">First</button>
+		<button type="button" class="btn btn-last btn-primary" id="last">Last</button>
+
+	</div>
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+				integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+				crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+				integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+				crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+	$('#open').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("open", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#start').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("start", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#stop').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("stop", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#close').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("close", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#next').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("next", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#prev').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("prev", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#info').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("info", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#stat').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("stat", function(data, status){
+			alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+		});
+	});
+	$('#pause').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("pause", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#resume').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("resume", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#first').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("first", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+	$('#last').on('click', function (event) {
+		event.preventDefault(); // To prevent following the link (optional)
+		$.get("last", function(data, status){
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	});
+</script>
+</body>
+</html>
